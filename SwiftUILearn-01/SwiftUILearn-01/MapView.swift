@@ -18,7 +18,7 @@ struct MapView: View {
     // 创建一个私有计算属性，返回地图的区域信息
     private var region: MKCoordinateRegion {
         MKCoordinateRegion( // 创建并返回 MKCoordinateRegion 实例
-            center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868), // 设置地图中心的坐标
+            center: CLLocationCoordinate2D(latitude: 26.640332, longitude: 106.624237), // 设置地图中心的坐标
             span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2) // 设置地图显示区域的跨度（缩放级别）
         )
     }
