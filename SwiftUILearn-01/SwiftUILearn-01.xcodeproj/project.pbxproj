@@ -14,6 +14,7 @@
 		0B2FC7502C2ACB0C006968C3 /* SwiftUILearn_01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC74F2C2ACB0C006968C3 /* SwiftUILearn_01Tests.swift */; };
 		0B2FC75A2C2ACB0C006968C3 /* SwiftUILearn_01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC7592C2ACB0C006968C3 /* SwiftUILearn_01UITests.swift */; };
 		0B2FC75C2C2ACB0C006968C3 /* SwiftUILearn_01UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC75B2C2ACB0C006968C3 /* SwiftUILearn_01UITestsLaunchTests.swift */; };
+		0BD8F5192C2AF9B9003AC670 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD8F5182C2AF9B9003AC670 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0B2FC7552C2ACB0C006968C3 /* SwiftUILearn-01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUILearn-01UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2FC7592C2ACB0C006968C3 /* SwiftUILearn_01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearn_01UITests.swift; sourceTree = "<group>"; };
 		0B2FC75B2C2ACB0C006968C3 /* SwiftUILearn_01UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearn_01UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0BD8F5182C2AF9B9003AC670 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				0B2FC7402C2ACB09006968C3 /* ContentView.swift */,
 				0B2FC7422C2ACB0C006968C3 /* Assets.xcassets */,
 				0B2FC7442C2ACB0C006968C3 /* Preview Content */,
+				0BD8F5182C2AF9B9003AC670 /* CircleImage.swift */,
 			);
 			path = "SwiftUILearn-01";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				0B2FC7412C2ACB09006968C3 /* ContentView.swift in Sources */,
 				0B2FC73F2C2ACB09006968C3 /* SwiftUILearn_01App.swift in Sources */,
+				0BD8F5192C2AF9B9003AC670 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
