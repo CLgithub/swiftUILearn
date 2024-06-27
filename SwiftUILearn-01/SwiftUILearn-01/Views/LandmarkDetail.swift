@@ -15,7 +15,7 @@ struct LandmarkDetail: View {
         ScrollView{ // 总的嵌套 垂直布局VStack 改为 ScrollView 便于滚动查看
             MapView(coordinate: landmark.locationCoordinate).frame(height: 300)    // 添加地图视图，高300
             
-            CircleImage(image: landmark.image).offset(y:-160).padding(.bottom,-180) // 距离上面的距离-160，下部距离自己的距离-180
+            CircleImage(image: landmark.image).offset(y:-130).padding(.bottom,-130) // 距离上面的距离-160，下部距离自己的距离-180
             
             VStack(alignment: .leading) { // 使用 VStack 将视图垂直排列 HStack 水平排列
     //            Image(systemName: "globe") // 添加一个系统图标，图标名称为 "globe"
@@ -33,7 +33,7 @@ struct LandmarkDetail: View {
                 .foregroundColor(.secondary) // 统一设置颜色
                 
                 Divider()   // 分割线
-                Text("关于此地 \(landmark.name)") .font(.title2)
+                Text("About \(landmark.name)") .font(.title2)
                 Text(landmark.description)
                 
             }
