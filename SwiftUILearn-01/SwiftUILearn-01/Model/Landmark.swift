@@ -12,12 +12,14 @@ import CoreLocation
 struct Landmark: Hashable, Codable, Identifiable{ // Identifiable 协议id所要求的属性Identifiable，读取数据时只需要添加属性就可以解码。?
     var id: Int
     var name: String
-    var park: String
+    var category: String
+    var city: String
     var state: String
+    var park: String
     var description: String
+    var isFavorite: Bool    // 是否标记为收藏
     
     private var imageName: String  // 定义一个私有变量 变量名：imagesName，变量类型：String
-    
     // 定义一个计算属性（类似方法），名称：image，类型：Image,
     // 计算属性 image 通过使用 imagesName 变量来创建并返回一个 Image 实例。
     var image: Image{
@@ -33,9 +35,7 @@ struct Landmark: Hashable, Codable, Identifiable{ // Identifiable 协议id所要
     
     // 类似的 定义一个计算属性 属性值由coordinates的坐标来得到
     var locationCoordinate: CLLocationCoordinate2D{
-        CLLocationCoordinate2D(
-            latitude: coordinates.latitude, longitude: coordinates.longitude
-        )
+        CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
     
     

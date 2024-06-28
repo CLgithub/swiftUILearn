@@ -124,11 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				0B2FC7402C2ACB09006968C3 /* ContentView.swift */,
+				0B7AA57A2C2BFBB600A2C804 /* LandmarkList.swift */,
+				0B7AA5782C2BFA7F00A2C804 /* LandmarkDetail.swift */,
 				0BD8F51A2C2AFD2F003AC670 /* MapView.swift */,
 				0BD8F5182C2AF9B9003AC670 /* CircleImage.swift */,
 				0BD5E3AF2C2BF4A200AC1149 /* LandmarkRow.swift */,
-				0B7AA5782C2BFA7F00A2C804 /* LandmarkDetail.swift */,
-				0B7AA57A2C2BFBB600A2C804 /* LandmarkList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -16,6 +16,10 @@ struct LandmarkRow: View {
             landmark.image.resizable().frame(width: 50, height: 50)
             Text(landmark.name)
             Spacer()
+            if landmark.isFavorite{
+                Image(systemName: "star.fill")  // star 图标名称⭐️，fill 充满
+                    .foregroundStyle(.yellow)   // 设置图标颜色
+            }
         }
     }
 }
