@@ -26,9 +26,10 @@ struct LandmarkRow: View {
 
 // 预览
 #Preview {
-    Group{
+    let landmarks=ModelData().landmarks
+    return Group{
         LandmarkRow(landmark: landmarks[0]) // 将数组第0为传入构造方法
-        LandmarkRow(landmark: landmarks[1]) // 将数组第0为传入构造方法
+        LandmarkRow(landmark: landmarks[1]) // 将数组第1为传入构造方法
     }
 }
 

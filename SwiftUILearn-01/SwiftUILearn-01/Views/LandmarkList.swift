@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct LandmarkList: View {
-    @State private var showFavoritesOnly=false  // 添加是否展示开关 @State：这是一个属性包装器（property wrapper），用于在 SwiftUI 视图中创建可变状态。当这个状态变化时，SwiftUI 会自动重新渲染视图。
+    @Environment(ModelData.self) var modelData // @Environment 从环境（类似上下文）中读取数据（通常是共享数据），数据类型ModelData.self(类似ModelData.class) 赋值给modelData
+    @State private var showFavoritesOnly=false  // 创建一个私有变量 @State：这是一个属性包装器（property wrapper），用于在 SwiftUI 视图中创建可变状态。当这个状态变化时，SwiftUI 会自动重新渲染视图。
     
     var filteredLandmarks:[Landmark]{   // 创建一个数组，数组值通过landmarks过滤而来
-        landmarks.filter{   // 过滤
+        modelData.landmarks.filter{   // 过滤
             //  收藏的 或者 是（其他显示）
             //  收藏的 或者 否（其他不显示）
             landmark in (landmark.isFavorite || !showFavoritesOnly )   // 过滤条件：!showFavoritesOnly 或者 isFavorite
@@ -33,6 +34,7 @@ struct LandmarkList: View {
                 }
                 
             }
+            .animation(.default, value: filteredLandmarks) // filteredLandmarks数组发生变化时，添加过渡动画
             .navigationTitle("Landmarks")   // 列表标题
         } detail: {
             Text("Select a Landmark")   // 占位符？
@@ -41,5 +43,5 @@ struct LandmarkList: View {
 }
 
 #Preview {
-    LandmarkList()
+    LandmarkList().environment(ModelData())
 }

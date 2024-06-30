@@ -7,6 +7,12 @@
 
 import Foundation
 
+@Observable // 将 ModelData 类 标记为可观察的。这个类的所有属性变化都会被 SwiftUI 自动追踪。
+class ModelData{
+    // 定义一个Landmark类型的数组 landmarks，数组值来源于调用 load方法，方法传参String landmarkData.json
+    var landmarks: [Landmark] = load("landmarkData.json")
+}
+
 // 定义一个泛型方法，方法名：load，用于从指定的文件中加载并解码数据，泛型类型 T 必须符合 Decodable 协议
 func load<T: Decodable>(_ filename: String) -> T{
     let data: Data
@@ -35,5 +41,4 @@ func load<T: Decodable>(_ filename: String) -> T{
     
 }
 
-// 定义一个Landmark类型的数组 landmarks，数组值来源于调用 load方法，方法传参String landmarkData.json
-var landmarks: [Landmark] = load("landmarkData.json")
+

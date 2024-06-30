@@ -15,6 +15,7 @@ struct ContentView: View {
 }
 
 // 使用 #Preview 来预览 ContentView
-#Preview {
-    ContentView() // 返回 ContentView 视图实例
-}
+//#Preview {
+//    ContentView() // 返回 ContentView 视图实例
+//        .environment(ModelData())
+//}
