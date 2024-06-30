@@ -16,7 +16,7 @@ struct FavoriteButton: View {
             isSet.toggle()  // 按钮用来切换isSet
         } label:{
             Label("Toggle Favorite", systemImage: isSet ? "star.fill": "star") // 按钮名称Toggle Favorite，用一个系统图标，若isSet=true，就显示填满的五角星
-                .labelStyle(.iconOnly) 
+                .labelStyle(.iconOnly)
                 .foregroundStyle(isSet ? .yellow: .gray)
         }
     }

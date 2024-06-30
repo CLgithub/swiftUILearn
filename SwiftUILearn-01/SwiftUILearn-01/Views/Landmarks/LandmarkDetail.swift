@@ -19,7 +19,7 @@ struct LandmarkDetail: View {
     }
     
     var body: some View {
-        @Bindable var modelData = modelData // 定义一个bindable变量 模型数据与视图之间进行双向数据绑定 简化和自动化数据变化通知
+        @Bindable var modelData = modelData //  不是 SwiftUI 中的原生属性包装器 模型数据与视图之间进行双向数据绑定 简化和自动化数据变化通知
         ScrollView{ // 总的嵌套 垂直布局VStack 改为 ScrollView 便于滚动查看
             MapView(coordinate: landmark.locationCoordinate).frame(height: 300)    // 添加地图视图，高300
             
