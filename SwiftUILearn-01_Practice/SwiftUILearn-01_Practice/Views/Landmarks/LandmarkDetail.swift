@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    @Environment(ModelData.self) var modelData
     var landmark: Landmark
+    
+    var landmarkIndex: Int{
+        modelData.landmarks.firstIndex( where: { $0.id==landmark.id } )!
+    }
+    
     var body: some View {
+        @Bindable var modelData = modelData
         ScrollView{
             MapView(coordinate: landmark.locationCoordinate).frame(height: 300)
             CircleImage(image: landmark.image).offset(y:-130).padding(.bottom,-130)
             
             VStack(alignment: .leading) {
-                Text(landmark.name).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black) // 名称
+                HStack{
+                    Text(landmark.name).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black) // 名称
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                }
                 // 简介
                 HStack{
                     Text(landmark.park)
@@ -34,5 +44,5 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    LandmarkDetail(landmark: landmarks[0])
+    LandmarkDetail(landmark: ModelData().landmarks[0])
 }
