@@ -1,7 +1,7 @@
 //
 //  BadgeBackground.swift
 //  SwiftUILearn-01
-//
+//  徽章背景
 //  Created by L on 2024/7/7.
 //
 

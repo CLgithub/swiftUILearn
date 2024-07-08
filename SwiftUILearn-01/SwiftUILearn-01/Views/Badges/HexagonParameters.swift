@@ -1,7 +1,7 @@
 //
 //  HexagonParameters.swift
 //  SwiftUILearn-01
-//  徽章
+//  徽章背景图形
 //  Created by L on 2024/7/7.
 //
 
