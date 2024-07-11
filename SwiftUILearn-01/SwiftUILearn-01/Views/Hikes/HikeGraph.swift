@@ -13,11 +13,11 @@ struct HikeGraph: View {
 
     var color: Color {
         switch path {
-        case \.elevation:
+        case \.elevation:   // 如果是海拔
             return .gray
-        case \.heartRate:
+        case \.heartRate:   // 如果是心跳
             return Color(hue: 0, saturation: 0.5, brightness: 0.7)
-        case \.pace:
+        case \.pace:    // 如果是步幅范围
             return Color(hue: 0.7, saturation: 0.4, brightness: 0.7)
         default:
             return .black
@@ -25,7 +25,7 @@ struct HikeGraph: View {
     }
 
     var body: some View {
-        let data = hike.observations
+        let data = hike.observations    // 拿到数组
         let overallRange = rangeOfRanges(data.lazy.map { $0[keyPath: path] })
         let maxMagnitude = data.map { magnitude(of: $0[keyPath: path]) }.max()!
         let heightRatio = 1 - CGFloat(maxMagnitude / magnitude(of: overallRange))
@@ -62,11 +62,8 @@ func magnitude(of range: Range<Double>) -> Double {
 #Preview {
     let hike = ModelData().hikes[0]
     return Group {
-        HikeGraph(hike: hike, path: \.elevation)
-            .frame(height: 200)
-        HikeGraph(hike: hike, path: \.heartRate)
-            .frame(height: 200)
-        HikeGraph(hike: hike, path: \.pace)
-            .frame(height: 200)
+        HikeGraph(hike: hike, path: \.elevation) .frame(height: 200)
+        HikeGraph(hike: hike, path: \.heartRate) .frame(height: 200)
+        HikeGraph(hike: hike, path: \.pace) .frame(height: 200)
     }
 }
