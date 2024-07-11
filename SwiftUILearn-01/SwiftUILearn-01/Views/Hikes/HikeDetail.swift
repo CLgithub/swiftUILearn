@@ -25,7 +25,9 @@ struct HikeDetail: View {
             HStack(spacing: 25) {
                 ForEach(buttons, id: \.0) { value in
                     Button {
-                        dataToShow = value.1
+                        withAnimation(.easeInOut(duration: 0.4)){   // 添加0.5s的动画
+                            dataToShow = value.1
+                        }
                     } label: {
                         Text(value.0)
                             .font(.system(size: 15))
