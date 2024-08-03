@@ -10,9 +10,10 @@ import SwiftUI // 导入 SwiftUI 框架
 struct ContentView: View {
     // 定义一个计算属性 body，它返回一些视图内容
     var body: some View {
-//        HikeView(hike: ModelData().hikes[0]) .padding()
+        Badge() // 徽章
+        LandmarkList()  // 列表视图
+        HikeView(hike: ModelData().hikes[0]) .padding() // 动画视图
 //        Spacer()
-        LandmarkList()
     }
 }
 
