@@ -1,7 +1,7 @@
 //
 //  SwiftUIView.swift
 //  SwiftUILearn-01
-//
+//  呈现详细页面
 //  Created by L on 2024/6/26.
 //
 

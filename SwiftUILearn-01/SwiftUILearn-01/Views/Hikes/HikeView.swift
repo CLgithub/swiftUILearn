@@ -1,6 +1,6 @@
 /*
 See the LICENSE.txt file for this sample’s licensing information.
-
+动画主视图
 Abstract:
 A view displaying information about a hike, including an elevation graph.
 */

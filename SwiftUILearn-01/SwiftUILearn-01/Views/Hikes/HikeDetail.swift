@@ -1,6 +1,6 @@
 /*
 See the LICENSE.txt file for this sample’s licensing information.
-
+三个视图切换
 Abstract:
 A view showing the details for a hike.
 */

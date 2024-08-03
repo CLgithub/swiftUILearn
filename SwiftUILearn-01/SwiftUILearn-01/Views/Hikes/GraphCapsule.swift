@@ -1,6 +1,6 @@
 /*
 See the LICENSE.txt file for this sample’s licensing information.
-单个胶囊图案，在整体整体中有个合适的位置与高度
+单个胶囊图案，在整体中有个合适的位置与高度
 Abstract:
 A single line in the graph.
 */

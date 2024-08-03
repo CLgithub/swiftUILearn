@@ -1,6 +1,6 @@
 /*
 See the LICENSE.txt file for this sample’s licensing information.
-
+海拔、心跳、步幅 三个视图
 Abstract:
 The elevation, heart rate, and pace of a hike plotted on a graph.
 */

@@ -1,7 +1,7 @@
 //
 //  Hike.swift
 //  SwiftUILearn-01
-//
+//  数据模型Hike
 //  Created by L on 2024/7/10.
 //
 

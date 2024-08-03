@@ -32,7 +32,7 @@ struct LandmarkList: View {
                 }
             }
             .navigationTitle("Landmarks")
-            .animation(.default, value: filteredLandmarks)
+            .animation(Animation.spring(dampingFraction: 0.5), value: filteredLandmarks)
         } detail: {
             Text("Select a Landmark")
         }
