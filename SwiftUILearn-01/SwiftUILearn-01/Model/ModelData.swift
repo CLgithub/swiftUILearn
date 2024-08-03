@@ -13,7 +13,7 @@ class ModelData{
     var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike]=load("hikeData.json")
     
-    // 新建一个键值对计算块 将类别名称作为键，以及每个键的关联地标数组
+    // 新建一个键值对计算块 将类别名称作为键，以及每个键的关联地标数组为值
     var categories: [String:[Landmark]]{
         Dictionary(
             grouping: landmarks,
