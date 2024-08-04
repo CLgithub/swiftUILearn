@@ -1,7 +1,7 @@
 //
 //  CategoryItem.swift
 //  SwiftUILearn-01
-//  显示一个地标
+//  分类单个显示
 //  Created by L on 2024/8/3.
 //
 

@@ -1,7 +1,7 @@
 //
 //  CategoryRow.swift
 //  SwiftUILearn-01
-//  显示单行
+//  分类单行显示
 //  Created by L on 2024/7/14.
 //
 
