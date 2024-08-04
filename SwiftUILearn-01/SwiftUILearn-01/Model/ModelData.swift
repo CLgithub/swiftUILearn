@@ -13,11 +13,15 @@ class ModelData{
     var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike]=load("hikeData.json")
     
+    var features: [Landmark] {
+        landmarks.filter{$0.isFeatured}
+    }
+    
     // 新建一个键值对计算块 将类别名称作为键，以及每个键的关联地标数组为值
     var categories: [String:[Landmark]]{
-        Dictionary(
-            grouping: landmarks,
-            by:{$0.category.rawValue}
+        Dictionary( // Dictionary(grouping:by:) - 这是 Swift 标准库中的一个方法，用于创建一个新的字典，将序列中的元素按照指定的键进行分组
+            grouping: landmarks,    // landmarks 是输入的数组，包含所有的 Landmark 对象。
+            by:{$0.category.rawValue}   // by分类依据， $0 表示当前的Landmark 对象，.category.rawValue获取类别的原始值
         )
     }
     

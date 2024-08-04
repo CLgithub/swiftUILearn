@@ -31,6 +31,12 @@ struct ContentView: View {
                     Label("Hike", systemImage: "figure.hiking")
                 }
                 .tag(2)
+            CategoryHome()
+                .padding()
+                .tabItem {
+                    Label("category", systemImage: "category")
+                }
+                .tag(3)
         }
     }
 }

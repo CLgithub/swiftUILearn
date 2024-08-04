@@ -17,6 +17,7 @@ struct Landmark: Hashable, Codable, Identifiable{ // Identifiable 协议id所要
     var park: String
     var description: String
     var isFavorite: Bool    // 是否标记为收藏
+    var isFeatured: Bool    // 是否是特征
     
 //    var category: String
     var category: Category  // 并非String类型，而是枚举类型
