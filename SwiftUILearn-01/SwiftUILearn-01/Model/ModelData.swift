@@ -14,7 +14,7 @@ class ModelData{
     var hikes: [Hike]=load("hikeData.json")
     
     var features: [Landmark] {
-        landmarks.filter{$0.isFeatured}
+        landmarks.filter { $0.isFeatured }
     }
     
     // 新建一个键值对计算块 将类别名称作为键，以及每个键的关联地标数组为值

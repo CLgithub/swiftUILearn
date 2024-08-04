@@ -16,7 +16,7 @@ struct CategoryHome: View {
             List{
                 modelData.features[0].image
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
                     .frame(height: 200)
                     .clipped()
                     .listRowInsets(EdgeInsets())    // 设置边缘为0
