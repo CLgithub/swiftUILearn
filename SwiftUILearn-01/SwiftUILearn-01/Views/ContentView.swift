@@ -33,6 +33,10 @@ struct ContentView: View {
                     Label("Hike", systemImage: "figure.hiking")
                 }
                 .tag(3)
+            ProfileHost()
+                .tabItem {
+                    Label("ProfileHost", systemImage: "star")
+                }.tag(4)
         }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryHome: View {
     
     @Environment(ModelData.self) var modelData
+    @State private var showingProfile = false
     
     var body: some View {
         NavigationSplitView{    // 动态生成
@@ -27,7 +28,18 @@ struct CategoryHome: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
+            .listStyle(.inset) // 应用于 List 视图，用于改变列表的视觉样式 列表项不会延伸到屏幕边缘。会在列表周围留出一些空白，给人一种更加精致和有层次感的外观。
             .navigationTitle("Featured") // Featured 特征
+            .toolbar{   // 为当前视图添加一个工具栏
+                Button{ // 在工具栏中创建一个按钮
+                    showingProfile.toggle() // 根据showingProfile 布尔值进行切换
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")    // 显示 User Profile 以及图标
+                }
+            }
+            .sheet(isPresented: $showingProfile){ // 片视图
+                ProfileHost().environment(modelData) // 其中包含ProfileHost
+            }
         } detail: {
             Text("Select a Landmark")
         }
