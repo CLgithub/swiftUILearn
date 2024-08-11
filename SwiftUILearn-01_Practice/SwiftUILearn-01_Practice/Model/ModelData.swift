@@ -11,6 +11,17 @@ import Foundation
 class ModelData{
     // 定义一个Landmark类型的数组 landmarks，数组值来源于调用 load方法，方法传参String landmarkData.json
     var landmarks: [Landmark] = load("landmarkData.json")
+    
+    var features: [Landmark] {
+        landmarks.filter { $0.isFeatured }
+    }
+    
+    var categories: [String:[Landmark]] {
+        Dictionary(
+            grouping: landmarks,
+            by:{$0.category.rawValue}
+        )
+    }
 }
 
 // 定义一个泛型方法，方法名：load，用于从指定的文件中加载并解码数据，泛型类型 T 必须符合 Decodable 协议
