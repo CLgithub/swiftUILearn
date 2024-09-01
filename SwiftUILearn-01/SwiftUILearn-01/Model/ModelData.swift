@@ -12,6 +12,7 @@ class ModelData{
     // 定义一个Landmark类型的数组 landmarks，数组值来源于调用 load方法，方法传参String landmarkData.json
     var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike]=load("hikeData.json")
+    var profile = Profile.default   // 更新该类 以包含用户个人资料的实例，该实例即使在用户关闭个人资料视图后，仍然存在于ModelData
     
     var features: [Landmark] {
         landmarks.filter { $0.isFeatured }

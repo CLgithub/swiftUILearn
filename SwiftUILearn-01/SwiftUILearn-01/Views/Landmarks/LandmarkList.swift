@@ -32,8 +32,8 @@ struct LandmarkList: View {
                         LandmarkRow(landmark: landmark1) // 每一个，分别交给LandmarkRow
                     }
                 }
-                
             }
+//            .listStyle(.inset)
             .animation(.default, value: filteredLandmarks) // filteredLandmarks数组发生变化时，添加过渡动画
             .navigationTitle("Landmarks")   // 列表标题
         } detail: {

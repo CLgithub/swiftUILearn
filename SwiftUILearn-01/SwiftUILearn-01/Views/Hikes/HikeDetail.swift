@@ -30,7 +30,7 @@ struct HikeDetail: View {
                         }
                     } label: {
                         Text(value.0)
-                            .font(.system(size: 15))
+                            .font(.system(size: 15))    // 按钮字体大小
                             .foregroundStyle(value.1 == dataToShow
                                 ? .gray
                                 : .accentColor)
