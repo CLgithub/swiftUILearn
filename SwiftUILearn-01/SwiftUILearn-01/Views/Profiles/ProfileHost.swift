@@ -21,7 +21,7 @@ struct ProfileHost: View{
             if editMode?.wrappedValue == .inactive{ // 如果是完成状态
                 ProfileSummary(profile: modelData.profile)  // 为了避免在确认任何编辑之前更新全局应用程序状态（例如当用户输入其姓名时），编辑视图会对其自身的副本进行操作。
             }else{  // 否则如果是编辑状态
-                Text("Profile Edittor")
+                ProfileEditor(profile: $draftProfile)
             }
                 
             
